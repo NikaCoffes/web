@@ -1,0 +1,426 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Ajustado a Arial */
+    background-color: rgba(245, 245, 245, 0.568); /* Color de fondo */
+    margin: 0;
+    padding: 0;
+ 
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #f8f5f5;
+    color: rgb(255, 255, 255); /* Cambiado a color igual al del segundo CSS */
+}
+
+img {
+    max-width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 20px; /* Añadir relleno alrededor del contenido */
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+    color: rgb(248, 241, 241); /* Asegura que el color de los encabezados sea blanco */
+}
+
+header {
+    justify-content: center;
+    display: flex;
+    background-color:rgba(211, 186, 174, 0.493); 
+    color: rgba(255, 255, 255, 0.945);
+    padding: 10px;
+    align-items: center;
+    margin: 10px;
+    position: relative; /* Necesario para posicionar la fecha */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo {
+    margin-right: 10px;
+    width: 200px; /* Ajusta el tamaño del logo a 100px */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+#fecha {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: grey;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.4rem; /* Ajusta el tamaño del texto */
+}
+
+nav {
+    display: flex;
+    justify-content: space-around; /* Distribuye elementos con espacio alrededor */
+    background-color: rgba(211, 186, 174, 0.493); /* Fondo blanco */
+    width: 100%; /* Asegura que el nav abarque toda la pantalla */
+    box-sizing: border-box;
+    margin: 10px;
+    text-align: center;
+    padding: 10px 0; /* Añadir relleno alrededor del contenido */
+    
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-around; /* Distribuir uniformemente */
+    align-items: center; /* Centrar verticalmente */
+    width: 100%; /* Asegura que la navegación abarque toda la pantalla */
+}
+
+@media(max-width: 768px) {
+    .navegacion {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.navegacion_enlace {
+    color: rgb(247, 240, 240); /* Color de los enlaces en nav */
+    padding: 10px 15px; /* Ajustado para ser más compacto */
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5rem; /* Tamaño del texto reducido */
+    flex-grow: 1; /* Hace que los enlaces crezcan uniformemente */
+}
+
+.navegacion_enlace:hover {
+    background-color: #eeeeee;
+    color: rgb(0, 0, 0); /* Cambiado a color igual */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: auto;
+    max-width: 1200px; /* Limita el ancho máximo */
+}
+
+.slider {
+    margin-bottom: 70px;
+    padding: 0px;
+    background-color: #ffffff;
+
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 250%;
+}
+
+.slides img {
+    width: 250%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.pedido-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+.pedido-btn:hover {
+    background-color: #cc0000;
+}
+
+.slider img {
+    width: 100%;
+    max-height: 250px;
+    display: block;
+    object-fit: cover;
+}
+
+.product-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 40px;
+    justify-content: center;
+   
+}
+
+.product.img.muestra {
+    margin-right: 20px;
+    width: 30%;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 65%;
+   
+}
+
+.texto-grande {
+    color: white;
+}
+.product {
+    background-color: rgba(150, 116, 102, 0.5); /* Fondo gris claro */
+    padding: 10px;
+    text-align: center;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: rgb(226, 214, 214); /* Asegura que el texto de los productos sea negro */
+}
+
+.product img, .product-section .img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .product-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-grid {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .product {
+        width: calc(50% - 20px);
+        margin-bottom: 20px;
+    }
+
+    .product.img.muestra {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navegacion {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navegacion_enlace {
+        width: 50%;
+        padding: 0.8rem 0;
+    }
+
+    .footer-icons img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto; /* Centrando horizontalmente */
+    color: black;
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-size: 1.6rem;
+    color: black;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.6rem;
+}
+
+form input[type="submit"] {
+    padding: 10px;
+    background-color: #f71414;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+form input[type="submit"]:hover {
+    background-color: #cc1212;
+}
+
+.cart-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto; /* Centrando horizontalmente */
+    color: black;
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+.cart-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-details h4 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: black;
+}
+
+.cart-item-details p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: gray;
+}
+
+.cart-item .remove-item {
+    background-color: #f71414;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+.cart-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.cart-footer h3 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: black;
+}
+
+.cart-footer .checkout-btn {
+    padding: 10px 20px;
+    background-color: #f71414;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+.cart-footer .checkout-btn:hover {
+    background-color: #cc1212;
+}
+
+.carrito-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;  /* Asegura que el botón esté por encima de otros elementos */
+    padding: 10px 20px;
+    background-color: #ff6600;  /* Color de fondo */
+    color: white;    /* Color del texto */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carrito-btn:hover {
+    background-color: #ff4500;  /* Cambia el color al pasar el ratón */
+}
+ /* Estilos para la imagen en la esquina inferior izquierda */
+ .imagen-esquina {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 20px;
+}
